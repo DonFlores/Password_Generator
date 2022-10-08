@@ -24,4 +24,4 @@ N/A
 ## Screenshot of the page
 
 The following image shows the websites current state.
-![Website fully functional.]
+![Website fully functional.](./assets/images/password-gen.png)
