@@ -38,6 +38,12 @@ function passwordOptions() {
     return userOptions
 }
 
+function getRandom(arr) {
+    var ranIndex = Math.floor(Math.random() * arr.length)
+    var ranElement = arr[ranIndex]
+    return ranElement
+}
+
 
 
 
