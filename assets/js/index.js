@@ -44,8 +44,37 @@ function getRandom(arr) {
     return ranElement
 }
 
-
-
+function generatePassword() {
+    var options = passwordOptions()
+    var result = []
+    var possibleCharacters = []
+    var guaranteedCharacters = []
+    if (!options) return null
+    if (options.hasSymbols) {
+        possibleCharacters = possibleCharacters.concat(symbols)
+        guaranteedCharacters.push(getRandom(symbols))
+    }
+    if (options.hasNumbers) {
+        possibleCharacters = possibleCharacters.concat(numbers)
+        guaranteedCharacters.push(getRandom(numbers))
+    }
+    if (options.hasUpperCase) {
+        possibleCharacters = possibleCharacters.concat(upperCasedCharacters)
+        guaranteedCharacters.push(getRandom(upperCasedCharacters))
+    }
+    if (options.hasLowerCase) {
+        possibleCharacters = possibleCharacters.concat(lowerCasedCharacters)
+        guaranteedCharacters.push(getRandom(lowerCasedCharacters))
+    }
+    for(var i = 0; i < options.length; i++) {
+        var possibleCharacter = getRandom(possibleCharacters)
+        result.push(possibleCharacter)
+    }
+    for(var i = 0; i < guaranteedCharacters.length; i++) {
+        result[i] = guaranteedCharacters[i]
+    }
+    return result.join('')
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
