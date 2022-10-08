@@ -1,5 +1,5 @@
 # Password_Generator
-[Deployed Link Here]
+[Deployed Link Here](https://donflores.github.io/Password_Generator/)
 
 ## Description
 
@@ -24,4 +24,4 @@ N/A
 ## Screenshot of the page
 
 The following image shows the websites current state.
-![Website fully functional.](./assets/images/Password_Generator.png)
+![Website fully functional.]
